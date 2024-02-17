@@ -1,5 +1,7 @@
 import React from 'react';
-
+import MovieList from './MovieList.jsx'
+import Search from './Search.jsx'
+import AddMovie from './AddMovie.jsx'
 const {useState, useEffect} = React
 
 
