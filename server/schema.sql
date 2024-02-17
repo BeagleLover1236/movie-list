@@ -1,0 +1,11 @@
+DROP DATABASE movies;
+
+CREATE DATABASE movies;
+
+USE movies;
+
+CREATE TABLE movies (
+  ID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  title varchar(50) NOT NULL,
+  hasWatched BIT NOT NULL DEFAULT 0
+);
