@@ -1,11 +1,10 @@
-DROP DATABASE movies;
+DROP DATABASE moviesList;
+CREATE DATABASE moviesList;
 
-CREATE DATABASE movies;
-
-USE movies;
+USE moviesList;
 
 CREATE TABLE movies (
   ID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
   title varchar(50) NOT NULL,
-  hasWatched BIT NOT NULL DEFAULT 0
+  hasWatched BOOLEAN NOT NULL DEFAULT false
 );
