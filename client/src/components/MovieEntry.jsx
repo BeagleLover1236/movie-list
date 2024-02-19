@@ -2,22 +2,24 @@ import React from 'react';
 const {useState} = React
 
 var MovieListEntry = (props) => {
+  const [watchState, setWatchState] = useState('Add to Watched')
+  // const watchedButton = (hasWatched) => {
+  //   props.handleToggle(props)
+  //   {backgroundColor: hasWatched === 1 || hasWatched === true? 'green' : 'grey'}
+
+  //   if(hasWatched === 1) {
+  //     setWatchState('Watched')
+  //   }
+  // }
 
   return (
     <div className="movie-entry">
       <h3>{props.movie.title}</h3>
-      <button
-        onClick={() => {
-        props.handleWatchToggle(props.movie.title);
-        props.handleClick;}} type="button">Add to watched</button>
+      <button type="button" onClick={() =>
+        props.handleToggle(props.movie.ID)
+      }>{watchState}</button>
     </div>
   )
-//   return (
-// <div className="movie-entry">
-//     <h2>{props.movie.title}</h2>
-//     <button type="button" watched={props.movie.watched}>Add to watched list</button>
-//   </div>
-//   )
 }
 
 export default MovieListEntry

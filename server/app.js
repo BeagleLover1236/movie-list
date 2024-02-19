@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 //set up routes
-app.use('/.', router)
+app.use('/data', router)
 
 //serve client files
 app.use(express.static(path.join('client', 'dist')));
@@ -30,5 +30,5 @@ app.use(express.static(path.join('client', 'dist')));
 //if run directly, run server
 if (!module.parent) {
   app.listen(app.get('port'));
-  console.log('Back Listening on', app.get('port'));
+  console.log('Listening on', app.get('port'));
 }

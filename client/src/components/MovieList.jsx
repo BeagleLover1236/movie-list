@@ -7,26 +7,11 @@ var MovieList = (props) => {
     return (
       <div className="movie-list">
         {props.movies.map((movie) => (
-          <MovieListEntry key={movie.title} handleWatchToggle={props.handleWatchToggle} movie={movie} handleClick={props.handleClick}/>
+          <MovieListEntry key={movie.ID} movie={movie} handleToggle={props.handleToggle}/>
         ))}
       </div>
     )
   }
-
-  // if (props) {
-  //   return (
-  //     <div className="movie-list">
-  //   {props.movies.map((movie, index) => (
-  //     <MovieListEntry title={movie.title} toggleWatched={props.toggleWatched} movie={movie}/>
-  //   ))}
-  // </div>
-  //   )
-  // } else {
-  //   return (
-  //     <div>No Movies</div>
-  //   )
-  // }
-
 }
 
 export default MovieList

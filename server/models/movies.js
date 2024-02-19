@@ -23,7 +23,15 @@ module.exports = {
       }
     })
   },
-  update: function(movie, callback) {
-    var queryString = 'UPDATE movies SET hasWatched = 1 WHERE title = ?'
+  update: function(parameters, callback) {
+    var queryString = 'UPDATE movies SET hasWatched = ? WHERE ID = ?';
+
+    db.query(queryString, parameters, (err, results) => {
+      if(err) {
+        callback(err);
+      } else {
+        callback(null, results);
+      }
+    })
   }
 }
